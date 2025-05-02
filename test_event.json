@@ -1,0 +1,188 @@
+{
+    "@source_timestamp": "2025-05-01T01:00:00.000Z",
+    "access_type": "MPEG-TS",
+    "resources": {
+        "memory_used": 226880,
+        "memory_allocation": 3550916,
+        "cpu_used": 18
+    },
+    "processed_us": 1746120775000000,
+    "@version": "1",
+    "tags": null,
+    "components": [
+        {
+            "bitrate": 5993,
+            "pid": 0,
+            "content_type": "PAT",
+            "monitored": true
+        },
+        {
+            "bitrate": 4495,
+            "pid": 6890,
+            "content_type": "PMT",
+            "children": [
+                {
+                    "bitrate": 5034806,
+                    "pid": 6891,
+                    "codec": "MPEG",
+                    "parent_pid": 6890,
+                    "pts_interval": 167,
+                    "colorspace": "YUV420 BT.709",
+                    "blocking_scene": 19,
+                    "content_type": "Video",
+                    "gop_struct": "IBBPBBPBBPBBPBBPBB",
+                    "aspect": "16:9 SAR 1.00 DAR 1.78",
+                    "descriptors": {
+                        "count": 1,
+                        "length": 9,
+                        "hashing": "0x9C6B"
+                    },
+                    "framerate": "29.97",
+                    "quantizers": {
+                        "min": 27,
+                        "avg": 27,
+                        "max": 27
+                    },
+                    "gop_size": 18,
+                    "resolution": "1920x1080i",
+                    "profile_level": "MP@HL",
+                    "xds": {
+                        "network": "@MAX HD",
+                        "program": "8 SECONDS",
+                        "call": null
+                    },
+                    "closed_captions": [
+                        "CEA-608   (1,3)",
+                        "CEA-708   (2)"
+                    ],
+                    "blocking_frame": 10,
+                    "index": 1,
+                    "monitored": true
+                },
+                {
+                    "loudness": {
+                        "daily": {
+                            "lra": 5.2,
+                            "integrated": -17
+                        },
+                        "hourly": {
+                            "lra": 5.2,
+                            "integrated": -17,
+                            "peak": -1
+                        },
+                        "timestamp_us": 1678312800000000
+                    },
+                    "bitrate": 343146,
+                    "pid": 6892,
+                    "codec": "AC3",
+                    "parent_pid": 6890,
+                    "pts_interval": 96,
+                    "content_type": "Audio",
+                    "language": "eng",
+                    "descriptors": {
+                        "count": 4,
+                        "length": 20,
+                        "hashing": "0xD877"
+                    },
+                    "dolby": {
+                        "intellignet-loudness": "Not Present",
+                        "status": "Valid",
+                        "channel-coding": "L,R",
+                        "data-rate": "384kbps",
+                        "evolution": "Not Present"
+                    },
+                    "level": -14.8,
+                    "truepeak": -2,
+                    "audio_stat": "HH",
+                    "samplerate": "48000",
+                    "channels": "2",
+                    "level_3sec": -17,
+                    "dial_norm": -24,
+                    "index": 1,
+                    "monitored": true
+                },
+                {
+                    "loudness": {
+                        "daily": {
+                            "lra": 3,
+                            "integrated": -17.8
+                        },
+                        "hourly": {
+                            "lra": 3,
+                            "integrated": -17.9,
+                            "peak": -5
+                        },
+                        "timestamp_us": 1678312800000000
+                    },
+                    "bitrate": 100396,
+                    "pid": 6893,
+                    "codec": "AC3",
+                    "parent_pid": 6890,
+                    "pts_interval": 64,
+                    "content_type": "Audio",
+                    "language": "spa",
+                    "descriptors": {
+                        "count": 4,
+                        "length": 20,
+                        "hashing": "0x549D"
+                    },
+                    "dolby": {
+                        "intellignet-loudness": "Not Present",
+                        "status": "Valid",
+                        "channel-coding": "L,R",
+                        "data-rate": "96kbps",
+                        "evolution": "Not Present"
+                    },
+                    "level": -15.2,
+                    "truepeak": -5.5,
+                    "audio_stat": "HH",
+                    "samplerate": "48000",
+                    "channels": "2",
+                    "level_3sec": -18.4,
+                    "dial_norm": -24,
+                    "index": 2,
+                    "monitored": true
+                }
+            ],
+            "monitored": true
+        }
+    ],
+    "uuid": "447e6e96-c13b-43d6-9845-d3c7b5c7351c",
+    "protocol": "1.0",
+    "timestamp_us": 1678313258430176,
+    "transport": {
+        "pcr_drift": "Jitter 9.65ms, Interval 26ms",
+        "pcr_pid": 6891,
+        "bitrate": 31635365,
+        "ts_id": 0,
+        "resolution": "1920x1080i29.97",
+        "ts_service_count": 2,
+        "ts_bitrate": 37699996,
+        "null_padding": 15467044
+    },
+    "label": "237.0.0.2:5000 p689",
+    "profile": {
+        "uuid": "419e3934-38b5-439d-8c3e-bf51f5e4d7c7",
+        "label": "Default"
+    },
+    "device": "4a316296-5186-4cb0-beaa-5ed53560ab8e",
+    "receivers": [
+        {
+            "program_number": 689,
+            "program_bitrate": 5482843,
+            "networks": [
+                {
+                    "source_port": "33795",
+                    "iat": 15300,
+                    "pps": 2965,
+                    "source_ip": "10.10.10.1"
+                },
+                {}
+            ],
+            "stream_type": "MPTS"
+        }
+    ],
+    "@timestamp": "2023-03-08T22:07:07.822Z",
+    "mcm-version": "6.0.4lab1",
+    "event_severity": "Critical"
+}

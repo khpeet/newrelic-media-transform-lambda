@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Globals:
+  Function:
+    Runtime: python3.10
+    Timeout: 60
+    MemorySize: 256
+
+Resources:
+  NewRelicMediaTransformFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.lambda_handler
+      CodeUri: .
+      Environment:
+        Variables:
+          GAUGE_METRICS: "memory_used,memory_allocation,cpu_used,bitrate,pts_interval,blocking_scene,count,length,gop_size,lra,integrated,peak,level,truespeak,level_3sec,dial_norm,pcr_drift,pcrbitrate,ts_bitrate,null_padding,program_bitrate"
+          SUMMARY_METRICS: "quantizers"
+          COUNT_METRICS: "channels,ts_service_count"
+          EXCLUDE_ATTRIBUTES: "tags"
+          NEW_RELIC_INGEST_KEY: "<INGEST_KEY>"
+      Events:
+        ApiEvent:
+          Type: Api
+          Properties:
+            Path: /metrics
+            Method: POST
