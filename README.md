@@ -27,8 +27,9 @@ Environment variables are used to control what metrics and attributes are genera
 
 ## Deploying to AWS
 1. Clone repo
-2. Run `sam deploy --guided`
-3. Follow the prompts to input:
+2. Run `sam build`
+3. Run `sam deploy --guided`
+4. Follow the prompts to input:
 * Stack Name - MediaLambdaTest (or whatever you want to name it)
 * AWS Region - Desired region (i.e - `us-east-2`)
 * Allow SAM CLI IAM role creation: Y
